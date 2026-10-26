@@ -1,0 +1,112 @@
+/* ------------------------------------------------------------
+   Responsive layout with Flexbox: follow along step by step.
+   Save after each step and look at the browser.
+   To test mobile: open DevTools (F12), then click the
+   device toolbar icon (or Ctrl/Cmd + Shift + M).
+   ------------------------------------------------------------ */
+
+/* Starting styles (already done for you) */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f4f8;
+}
+
+main {
+  padding: 24px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* STEP 1: Full-width header
+   A block element is already full width, so we only need to style it. */
+.site-header {
+  background: #5b5fc7;
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+}
+
+/* STEP 2: Turn the cards section into a flex container.
+   Uncomment the block below. The cards go from stacked to side by side. */
+
+/*
+.cards {
+  display: flex;
+}
+*/
+
+/* STEP 3: Add space between the cards.
+   gap sets the empty space BETWEEN flex items. It does not add
+   space on the outside edges, only between neighbors.
+   gap: 20px puts 20 pixels between card 1 and 2, and between
+   card 2 and 3. It works in both directions: in a row it spaces
+   the cards side by side, and in a column (Step 5) it spaces
+   them top to bottom, so you only write it once.
+   Before gap, people used margins on each item, which was messier.
+   Uncomment the block below (or add gap to your Step 2 block). */
+
+/*
+.cards {
+  gap: 20px;
+}
+*/
+
+/* STEP 4: Make the cards share the width equally.
+   Without this, each card is only as wide as its text.
+   flex: 1 is shorthand that tells an item "grow to fill the
+   available space". When every item has flex: 1, they all grow
+   by the same amount, so you get three equal columns.
+   Try it: give just one card flex: 2 and it will take twice as
+   much space as the others (a 1 : 2 : 1 split).
+   Note: flex goes on the ITEMS (.card), not the container.
+   Why it matters for mobile: in a column layout (Step 5), the
+   cards will stretch to the full width of the screen. */
+
+/*
+.card {
+  flex: 1;
+}
+*/
+
+/* STEP 5: Mobile layout.
+   A media query only applies when its condition is true.
+   max-width: 700px means "when the screen is 700px wide or
+   narrower". Anything inside the braces is ignored on wider
+   screens, so desktop stays exactly the same.
+
+   flex-direction chooses which way the flex items line up:
+     row     = side by side (the default, what we have on desktop)
+     column  = stacked top to bottom (what we want on mobile)
+   Because the media query comes AFTER the earlier .cards rules,
+   it overrides them, so we only need to change the one thing
+   that is different on mobile. */
+
+/*
+@media (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+*/
+
+/* CHECK YOUR WORK
+   - Desktop (wide window): 3 columns
+   - Mobile (narrow window or device emulation): 1 column
+   - Header spans the full width in both
+
+   BE READY TO EXPLAIN: What does max-width: 700px mean in your
+   own words? What happens if you change it to 1000px? */
