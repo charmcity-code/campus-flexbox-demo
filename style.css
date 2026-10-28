@@ -20,6 +20,10 @@ main {
   padding: 24px;
 }
 
+h1 {
+  font-family: Creepster;
+}
+
 .card {
   background: white;
   padding: 20px;
@@ -43,11 +47,9 @@ main {
 /* STEP 2: Turn the cards section into a flex container.
    Uncomment the block below. The cards go from stacked to side by side. */
 
-/*
 .cards {
   display: flex;
 }
-*/
 
 /* STEP 3: Add space between the cards.
    gap sets the empty space BETWEEN flex items. It does not add
@@ -59,11 +61,9 @@ main {
    Before gap, people used margins on each item, which was messier.
    Uncomment the block below (or add gap to your Step 2 block). */
 
-/*
 .cards {
   gap: 20px;
 }
-*/
 
 /* STEP 4: Make the cards share the width equally.
    Without this, each card is only as wide as its text.
@@ -76,11 +76,9 @@ main {
    Why it matters for mobile: in a column layout (Step 5), the
    cards will stretch to the full width of the screen. */
 
-/*
 .card {
   flex: 1;
 }
-*/
 
 /* STEP 5: Mobile layout.
    A media query only applies when its condition is true.
@@ -95,13 +93,11 @@ main {
    it overrides them, so we only need to change the one thing
    that is different on mobile. */
 
-/*
 @media (max-width: 700px) {
   .cards {
     flex-direction: column;
   }
 }
-*/
 
 /* CHECK YOUR WORK
    - Desktop (wide window): 3 columns

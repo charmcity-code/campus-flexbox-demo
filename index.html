@@ -1,37 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <!-- This line is required for media queries to work on real phones -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Responsive Layout Demo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- This line is required for media queries to work on real phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout Demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>My Responsive Page</h1>
+    </header>
 
-  <header class="site-header">
-    <h1>My Responsive Page</h1>
-  </header>
+    <main>
+      <!-- .cards is the flex container. Each .card is a flex item. -->
+      <section class="cards">
+        <article class="card">
+          <h2>Card One</h2>
+          <p>Flexbox lines these cards up in a row.</p>
+        </article>
 
-  <main>
-    <!-- .cards is the flex container. Each .card is a flex item. -->
-    <section class="cards">
-      <article class="card">
-        <h2>Card One</h2>
-        <p>Flexbox lines these cards up in a row.</p>
-      </article>
+        <article class="card">
+          <h2>Card Two</h2>
+          <p>On a small screen they stack into one column.</p>
+        </article>
 
-      <article class="card">
-        <h2>Card Two</h2>
-        <p>On a small screen they stack into one column.</p>
-      </article>
-
-      <article class="card">
-        <h2>Card Three</h2>
-        <p>A media query decides when the switch happens.</p>
-      </article>
-    </section>
-  </main>
-
-</body>
+        <article class="card">
+          <h2>Card Three</h2>
+          <p>A media query decides when the switch happens.</p>
+        </article>
+      </section>
+    </main>
+  </body>
 </html>
